@@ -14,9 +14,9 @@ with open(nome_file, 'rb') as f:
 data = list(data)
 print("lettura ex ok")
 
-larghezza_fascia=7000
+larghezza_fascia=7
 
-for i in range(10):
+for i in range(100):
     posizione = random.randint(0,len(data))
     for x in range(larghezza_fascia):
         if(posizione+x < len(data)):

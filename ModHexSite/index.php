@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE>
+<html >
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <title>Max's AJAX File Uploader</title>
@@ -17,6 +17,7 @@ function stopUpload(success){
       var result = '';
       if (success == 1){
          result = '<span class="msg">The file was uploaded successfully!<\/span><br/><br/>';
+
       }
       else {
          result = '<span class="emsg">There was an error during file upload!<\/span><br/><br/>';
@@ -26,14 +27,22 @@ function stopUpload(success){
       document.getElementById('f1_upload_form').style.visibility = 'visible';      
       return true;   
 }
+
+function viewResult(destination){
+    document.getElementById('foto_fianle').innerHTML = '<img  height="500" src="media/mod_media/' + destination +  '"/>';
+
+
+}
+
+
 //-->
 </script>   
 </head>
 
 <body>
+
+
        <div id="container">
-            <div id="header"><div id="header_left"></div>
-            <div id="header_main">Max's AJAX File Uploader</div><div id="header_right"></div></div>
             <div id="content">
                 <form action="upload.php" method="post" enctype="multipart/form-data" target="upload_target" onsubmit="startUpload();" >
                      <p id="f1_upload_process">Loading...<br/><img src="loader.gif" /><br/></p>
@@ -49,7 +58,10 @@ function stopUpload(success){
                      <iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
                  </form>
              </div>
-             <div id="footer"><a href="http://www.ajaxf1.com" target="_blank">Powered by AJAX F1</a></div>
+           <center>
+           <div id="foto_fianle"></div>
          </div>
+       </center>
+
                  
 </body>   
