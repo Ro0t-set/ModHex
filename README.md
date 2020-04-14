@@ -5,3 +5,5 @@ it is the main algorithm to modify the bits of photos (jpg), videos (mp4, mov, a
 
 You can use the site to automate the process
 
+![Site](IMG_4622.PNG )
+
